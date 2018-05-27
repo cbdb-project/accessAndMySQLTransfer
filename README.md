@@ -17,8 +17,6 @@ with open('cbdb_data_new.sql', 'wt') as f:
                 line = line.split('`')
                 line[1] = line[1].upper()
                 f.write('`'.join(line))
-            elif 'biog_main' in line:
-                pass
             else:
                 f.write(line)
 ```
