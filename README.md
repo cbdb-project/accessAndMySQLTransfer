@@ -22,3 +22,8 @@ with open('cbdb_data_new.sql', 'wt') as f:
             else:
                 f.write(line)
 ```
+
+执行如下命令添加索引
+```sql
+alter table `BIOG_INST_DATA` change `tts_sysno` `tts_sysno` int primary key auto_increment;
+```
