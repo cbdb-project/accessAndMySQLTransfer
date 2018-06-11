@@ -22,7 +22,7 @@ with open('cbdb_data_new.sql', 'wt') as f:
 ```
 
  &gt;=python3.5 version:
-```
+```python
 with open('cbdb_data_new.sql', 'wt', encoding="utf8") as f:
     with open('cbdb_data.sql', 'rt', encoding="utf8") as f2:
         for line in f2:
