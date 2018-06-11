@@ -21,7 +21,7 @@ with open('cbdb_data_new.sql', 'wt') as f:
                 f.write(line)
 ```
 
- >=python3.5 version:
+ &gt;=python3.5 version:
 ```
 with open('cbdb_data_new.sql', 'wt', encoding="utf8") as f:
     with open('cbdb_data.sql', 'rt', encoding="utf8") as f2:
