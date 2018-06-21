@@ -47,6 +47,13 @@ type_name = type_name if type_name != 'BIT' else 'SMALLINT'
 ```sql
 alter table `BIOG_INST_DATA` change `tts_sysno` `tts_sysno` int primary key auto_increment;
 ```
+
+或直接 add 此栏位信息
+
+``sql
+alter table `BIOG_INST_DATA` add `tts_sysno` int primary key auto_increment
+```
+
 5. 情况operations表
 operations包含操作记录，如果是需要删除请执行如下命令
 ```sql
