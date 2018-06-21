@@ -43,6 +43,7 @@ and
 type_name = type_name if type_name != 'BIT' else 'SMALLINT'
 
 4. 执行如下命令添加索引(just for CBDB)
+先在BIOG_INST_DATA新建一个字段，属性int，其他默认
 ```sql
 alter table `BIOG_INST_DATA` change `tts_sysno` `tts_sysno` int primary key auto_increment;
 ```
