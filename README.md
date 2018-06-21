@@ -50,7 +50,7 @@ alter table `BIOG_INST_DATA` change `tts_sysno` `tts_sysno` int primary key auto
 
 或直接 add 此栏位信息
 
-``sql
+```sql
 alter table `BIOG_INST_DATA` add `tts_sysno` int primary key auto_increment
 ```
 
