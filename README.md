@@ -59,3 +59,5 @@ operations包含操作记录，如果是需要删除请执行如下命令
 ```sql
 TRUNCATE TABLE operations;
 ```
+
+6. It must include drop table sentences, when you export MySQL datadump
