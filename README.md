@@ -50,3 +50,7 @@ TRUNCATE TABLE operations;
 ```
 
 5. It must include drop table sentences, when you export MySQL datadump
+
+6. If you copy some data from Access to a text file and then want to import that text file into MySQL, you have to replace FALSE by 0, and replace TRUE by 1 in that file
+
+7. In CBDB, foreign key mechanism will stop you from truncating BIOG_MAIN. If you really want to update BIOG_MAIN only, you can: 1) delete the ids which you want to delete. 2) use REPLACE INTO instead of INSERT INTO to import your new data(**How to replace the data which were frozen by foreign keys**)
