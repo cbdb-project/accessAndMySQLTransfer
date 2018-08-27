@@ -4,6 +4,8 @@ access2mysql.ipynb - convert Access MDB to MySQL
 
 mysql2access.ipynb -  convert MySQL to Access MDB
 
+**We highly suggest you to use MySQL>=5.7**
+
 Notice:
 
 1. If your encoding is utf8mb4 and encounter problems when you run mysql2access.ipynb, please check that whether the table reported by mysql2access.ipynb includes varchar(255). If so, please revise it to varchar(191)
@@ -54,3 +56,6 @@ TRUNCATE TABLE operations;
 6. If you copy some data from Access to a text file and then want to import that text file into MySQL, you have to replace FALSE by 0, and replace TRUE by 1 in that file
 
 7. In CBDB, foreign key mechanism will stop you from truncating BIOG_MAIN. If you really want to update BIOG_MAIN only, you can: 1) delete the ids which you want to delete. 2) use REPLACE INTO instead of INSERT INTO to import your new data(**How to replace the data which were frozen by foreign keys**)
+
+8. MySQL version<5.7 can define field type as JSON. If you are runing a MySQL<5.7, please don't import the tables below: operations, users
+
