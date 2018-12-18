@@ -4,6 +4,8 @@ access2mysql.ipynb - convert Access MDB to MySQL
 
 mysql2access.ipynb -  convert MySQL to Access MDB
 
+priforkey.ipynb - setup primary keys from TablePrimaryKeys.xlsx
+
 **We highly suggest you to use MySQL>=5.7**
 
 Notice:
