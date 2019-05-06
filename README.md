@@ -61,3 +61,14 @@ TRUNCATE TABLE operations;
 
 8. MySQL version<5.7 can define field type as JSON. If you are runing a MySQL<5.7, please don't import the tables below: operations, users
 
+9. Remove all foreign keys:
+
+```
+SELECT CONCAT('ALTER TABLE ',TABLE_SCHEMA,'.',TABLE_NAME,' DROP FOREIGN KEY ',CONSTRAINT_NAME,' ;') 
+FROM information_schema.TABLE_CONSTRAINTS c 
+WHERE c.TABLE_SCHEMA='cbdb_data' AND c.CONSTRAINT_TYPE='FOREIGN KEY';
+```
+
+Reference: https://blog.csdn.net/junlovejava/article/details/78360253
+
+10. The primary key information in TablePrimaryKeys.xlsx is not complete( will be fixed ). If you want to remove your all priamry keys, please be very carefull.
