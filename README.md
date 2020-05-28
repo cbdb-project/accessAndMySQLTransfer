@@ -74,3 +74,5 @@ Reference: https://blog.csdn.net/junlovejava/article/details/78360253
 10. The primary key information in TablePrimaryKeys.xlsx is not complete( will be fixed ). If you want to remove your all priamry keys, please be very carefull.
 
 11. If you got error "[HYC00] [Microsoft][ODBC Microsoft Access Driver]Optional feature not implemented  (106) (SQLBindParameter)", please switch your pyodbc version to 4.0.24 or 4.0.27+. Reference: https://stackoverflow.com/questions/54220640/optional-feature-not-implemented-error-with-pyodbc-query-against-access-databa
+
+12. **Change mysql table name to upper case.xlsx** - An Excel spreadsheet to generate sql sentences to change lower case table names to upper case table names
