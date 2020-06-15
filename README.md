@@ -77,4 +77,4 @@ Reference: https://blog.csdn.net/junlovejava/article/details/78360253
 
 12. **Change mysql table name to upper case.xlsx** - An Excel spreadsheet to generate sql sentences to change lower case table names to upper case table names
 
-13. You will find CBDB primay key information in TablesFields.xlsx and foreign key information in TablePrimaryKeys_forfk.xlsx
+13. You will find CBDB primay key information in TablesFields.xlsx and foreign key information in TablePrimaryKeys_forfk.xlsx. Don't forget cbdb_name_list
