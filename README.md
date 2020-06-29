@@ -47,7 +47,7 @@ and
 type_name = type_name if type_name != 'BIT' else 'SMALLINT'
 
 
-4. 情况operations表
+4. 清空 operations 表
 operations包含操作记录，如果是需要删除请执行如下命令
 ```sql
 TRUNCATE TABLE operations;
