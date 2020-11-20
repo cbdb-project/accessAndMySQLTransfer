@@ -17,7 +17,7 @@ Notice:
 with open('cbdb_data_new.sql', 'wt') as f:
     with open('cbdb_data.sql', 'rt') as f2:
         for line in f2:
-            if 'TABLE' in line or 'INSERT INTO' in line:
+            if 'TABLE' in line or 'INSERT INTO' in line or 'DELETE' in line:
                 line = line.split('`')
                 line[1] = line[1].upper()
                 f.write('`'.join(line))
@@ -30,7 +30,7 @@ with open('cbdb_data_new.sql', 'wt') as f:
 with open('cbdb_data_new.sql', 'wt', encoding="utf8") as f:
     with open('cbdb_data.sql', 'rt', encoding="utf8") as f2:
         for line in f2:
-            if 'TABLE' in line or 'INSERT INTO' in line:
+            if 'TABLE' in line or 'INSERT INTO' in line or 'DELETE' in line:
                 line = line.split('`')
                 line[1] = line[1].upper()
                 f.write('`'.join(line))
