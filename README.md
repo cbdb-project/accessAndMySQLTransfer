@@ -71,6 +71,20 @@ WHERE c.TABLE_SCHEMA='cbdb_data' AND c.CONSTRAINT_TYPE='FOREIGN KEY';
 
 Reference: https://blog.csdn.net/junlovejava/article/details/78360253
 
+Another solution to stop foreign key constraint temporarily
+
+```
+SET FOREIGN_KEY_CHECKS=0;
+SET GLOBAL FOREIGN_KEY_CHECKS=0;
+```
+
+Enable foreign key constraint
+
+```
+SET FOREIGN_KEY_CHECKS=1;
+SET GLOBAL FOREIGN_KEY_CHECKS=1;
+```
+
 10. The primary key information in TablePrimaryKeys.xlsx is not complete( will be fixed ). If you want to remove your all priamry keys, please be very carefull.
 
 11. If you got error "[HYC00] [Microsoft][ODBC Microsoft Access Driver]Optional feature not implemented  (106) (SQLBindParameter)", please switch your pyodbc version to 4.0.24 or 4.0.27+. Reference: https://stackoverflow.com/questions/54220640/optional-feature-not-implemented-error-with-pyodbc-query-against-access-databa
@@ -78,3 +92,9 @@ Reference: https://blog.csdn.net/junlovejava/article/details/78360253
 12. **Change mysql table name to upper case.xlsx** - An Excel spreadsheet to generate sql sentences to change lower case table names to upper case table names
 
 13. You will find CBDB primay key information in TablesFields.xlsx and foreign key information in TablePrimaryKeys_forfk.xlsx. Don't forget cbdb_name_list
+
+14. If you need to use cursor:
+
+```
+db = pymysql.connect(host=DB_HOST, user=DB_USERNAME, password=DB_PASSWORD, database=DB_DATABASE,charset="utf8mb4",cursorclass=pymysql.cursors.DictCursor)
+```
